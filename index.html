@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Human Upside — The future, translated.</title>
+  <meta name="description" content="Evidence-led AI optimism for the rest of us. Receipts, caveats, and one practical next step — every story." />
+  <meta property="og:title" content="Human Upside — The future, translated." />
+  <meta property="og:description" content="Evidence-led AI optimism for the rest of us." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://humanupside.ai/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌃</text></svg>" />
+  <style>
+    :root {
+      --terracotta: #C96F4A;
+      --cream: #FFF6EC;
+      --brown: #2B1B12;
+      --muted-cream: rgba(255, 246, 236, 0.72);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--terracotta);
+      color: var(--cream);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px clamp(20px, 5vw, 64px);
+    }
+    .wordmark {
+      font-weight: 700;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--cream);
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    .nav-links a:hover { opacity: 1; text-decoration: underline; }
+    .nav-cta {
+      background: var(--brown);
+      color: var(--cream) !important;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .nav-cta:hover { text-decoration: none !important; opacity: 0.92; }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+    .hero {
+      padding: clamp(48px, 9vh, 110px) clamp(20px, 5vw, 64px) clamp(40px, 6vh, 72px);
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    h1 {
+      font-size: clamp(52px, 9.5vw, 148px);
+      line-height: 0.96;
+      letter-spacing: -0.035em;
+      font-weight: 800;
+      max-width: 12ch;
+    }
+    .sub {
+      margin-top: 28px;
+      font-size: clamp(17px, 2.2vw, 24px);
+      line-height: 1.45;
+      max-width: 34ch;
+      color: var(--muted-cream);
+    }
+    .cta-row { margin-top: 40px; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+    .btn {
+      background: var(--cream);
+      color: var(--brown);
+      font-weight: 700;
+      font-size: clamp(15px, 1.6vw, 18px);
+      padding: 16px 34px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .link-secondary {
+      color: var(--cream);
+      font-size: clamp(15px, 1.6vw, 17px);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255, 246, 236, 0.5);
+      padding-bottom: 2px;
+    }
+    .link-secondary:hover { border-bottom-color: var(--cream); }
+    .rule { border: none; border-top: 1px solid rgba(43, 27, 18, 0.25); margin: 0 clamp(20px, 5vw, 64px); }
+    .ticker {
+      padding: 16px clamp(20px, 5vw, 64px) 22px;
+      font-size: 13.5px;
+      letter-spacing: 0.06em;
+      color: rgba(43, 27, 18, 0.72);
+      text-transform: uppercase;
+    }
+    .ticker span { color: rgba(43, 27, 18, 0.45); margin: 0 6px; }
+    footer { text-align: center; padding: 26px; font-size: 13px; color: rgba(43, 27, 18, 0.55); }
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="wordmark" href="/">Human Upside</a>
+    <div class="nav-links">
+      <a href="#evidence">Evidence</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#subscribe">Subscribe</a>
+    </div>
+  </nav>
+  <main>
+    <section class="hero">
+      <h1>The future, translated.</h1>
+      <p class="sub">Evidence-led AI optimism for the rest of us — receipts, caveats, and one practical next step, every story.</p>
+      <div class="cta-row">
+        <a class="btn" href="#subscribe">Subscribe free</a>
+        <a class="link-secondary" href="https://superada.ai/blog/the-glorious-future-needs-a-translator/">Read the manifesto</a>
+    </section>
+  </main>
+  <hr class="rule" />
+  <p class="ticker">Nature <span>·</span> NEJM <span>·</span> The Lancet <span>·</span> OECD</p>
+  <footer>© 2026 Human Upside · humanupside.ai</footer>
+</body>
+</html>
