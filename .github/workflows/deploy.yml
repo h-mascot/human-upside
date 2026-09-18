@@ -1,0 +1,21 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel production deployment
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -eu
+          resp=$(curl -sS -X POST "https://api.vercel.com/v13/deployments?teamId=team_q5rzscT5IPgHGhHvcVzsZka1" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            -H "Content-Type: application/json" \
+            -d '{"name":"human-upside","project":"human-upside","target":"production","gitSource":{"type":"github","repoId":1375200052,"repo":"h-mascot/human-upside","ref":"main"}}')
+          echo "$resp" | python3 -c "import json,sys; d=json.load(sys.stdin); print('deployment:', d.get('uid'), d.get('readyState'), '| error:', (d.get('error') or {}).get('message'))"
+          test -n "$(echo "$resp" | python3 -c "import json,sys; print(json.load(sys.stdin).get('uid',''))")"
